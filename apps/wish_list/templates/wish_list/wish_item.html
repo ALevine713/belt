@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ wish.item }}</title>
+  </head>
+  <body>
+    <a href="/dashboard">Home</a>
+    <a href="/logout">Logout</a>
+
+    <h3>{{ wish.item }}</h3>
+
+    <h3>Others who also want this item</h3>
+    {% for user in wish.users.all %}
+      {{ user.username }}
+    {% endfor %}
+
+  </body>
+</html>
